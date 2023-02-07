@@ -1,0 +1,4 @@
+src/styles/module/
+dist/
+src/wxcomponents
+src/uni.scss

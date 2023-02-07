@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "vue.volar",
+    "uni-helper.uni-app-snippets-vscode",
+    "uni-helper.uni-app-schemas-vscode",
+    "mrmaoddxxaa.create-uniapp-view",
+    "gruntfuggly.todo-tree"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur",
+    "hookyqr.beautify",
+    "dbaeumer.jshint",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "vscode.typescript-language-features"
+  ]
+}
