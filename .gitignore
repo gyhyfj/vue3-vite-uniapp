@@ -23,3 +23,5 @@ dist
 .vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json
+
+.stylelintcache

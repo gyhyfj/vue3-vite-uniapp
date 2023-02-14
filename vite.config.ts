@@ -2,6 +2,9 @@
 import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import path from 'path'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+import cssNesting from 'tailwindcss/nesting'
 import AutoImport from 'unplugin-auto-import/vite'
 import eslintPlugin from 'vite-plugin-eslint'
 import stylelintPlugin from 'vite-plugin-stylelint'
@@ -40,10 +43,8 @@ export default defineConfig({
   envDir: path.resolve(__dirname, './env'),
   envPrefix: ['VITE_'],
   css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@import "./src/styles/index.scss";',
-      },
+    postcss: {
+      plugins: [tailwindcss, autoprefixer, cssNesting as any],
     },
   },
   esbuild: {
@@ -52,5 +53,6 @@ export default defineConfig({
   define: {
     'import.meta.vitest': 'undefined',
   },
+  // @ts-ignore
   test: { includeSource: ['src/**/*.{js,ts}'] },
 })
